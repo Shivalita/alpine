@@ -21,6 +21,8 @@
 
 import React from 'react';
 import {catalogue} from './catalogue.js';
+import {images} from './images.js';
+
 import Couleurs from './Couleurs.js';
 import Jantes from './Jantes.js';
 
@@ -48,7 +50,9 @@ const Display = () => {
         ));
     }
 
-    const source = catalogue.versions[1].images.img1;
+    // const source = catalogue.versions[1].images.img1;
+    const source = images.configurateur.modele.pure[2].src;
+
 
     return (
           <div>

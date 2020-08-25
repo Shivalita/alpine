@@ -35,6 +35,7 @@ const Couleurs = (props) => {
         <div className="card-body text-center">
             <h5 className="card-title">{props.data.option}</h5>
             <h6>{props.data.prix}</h6>
+            {/* <img src={props.data.images.img1} alt="toto"></img> */}
             <Button choice={props} category={'couleur'}/>
         </div>
     </div>
