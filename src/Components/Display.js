@@ -23,6 +23,7 @@ import React from 'react';
 import {catalogue} from './catalogue.js';
 import Couleurs from './Couleurs.js';
 import Jantes from './Jantes.js';
+import Versions from './Versions.js';
 
 // import { useSelector} from 'react-redux';
 
