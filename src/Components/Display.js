@@ -29,11 +29,12 @@ import Jantes from './Jantes.js';
 const Display = () => {
     // const test = useSelector((state) => state.couleur);
 
-    const displayVersions = () => {
-        return Object.keys(catalogue.versions).map(key => (
-          <Versions key={catalogue.versions[key].id} data={catalogue.versions[key]}/>
-        ));
-    }
+    // const displayVersions = () => {
+    //     return Object.keys(catalogue.versions).map(key => (
+    //       <Versions key={catalogue.versions[key].id} data={catalogue.versions[key]}/>
+    //     ));
+    // }
+
 
     const displayCouleurs = () => {
         return Object.keys(catalogue.couleurs).map(key => (
@@ -47,11 +48,13 @@ const Display = () => {
         ));
     }
 
+    const source = catalogue.versions[1].images.img1;
+
     return (
           <div>
-            {displayVersions()}
             {displayCouleurs()}
             {displayJantes()}
+            <img src={source} alt="toto"></img>
           </div>
     )
 

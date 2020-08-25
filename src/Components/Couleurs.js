@@ -26,7 +26,6 @@
 // export default Couleurs;
 
 import React from 'react';
-import {catalogue} from './catalogue.js';
 import Button from './Button.js';
 
 const Couleurs = (props) => {
@@ -39,7 +38,7 @@ const Couleurs = (props) => {
             <Button choice={props} category={'couleur'}/>
         </div>
     </div>
-)
+  )
 }
 
 export default Couleurs;

@@ -1,7 +1,30 @@
+import pure from '../images/sources-homepage/versions/ALPINE-PURE-1.png';
+import compoPure from '../images/sources-homepage/versions/COMPO-PURE.png';
+import legende from '../images/sources-homepage/versions/ALPINE-LEGENDE-1.png';
+import compoLegende from '../images/sources-homepage/versions/COMPO-LEGENDE.png';
+
+
+
 export const catalogue = {
     'versions' : [
-        {'id' : 0, 'option' : 'Pure', 'prix' : 54700},
-        {'id' : 1, 'option' : 'Legende', 'prix' : 58500}
+        {
+            'id' : 0, 
+            'option' : 'Pure', 
+            'prix' : 54700, 
+            'images' : {
+                'img1' : pure,
+                'img2' : compoPure
+            }
+        },
+        {
+            'id' : 1, 
+            'option' : 'Legende', 
+            'prix' : 58500, 
+            'images' : {
+                'img1' : legende,
+                'img2' : compoLegende
+            }
+        }
     ],
     'couleurs' : [
         {'id' : 0, 'option' : 'bleu_alpine', 'prix' : 1800},

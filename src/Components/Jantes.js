@@ -1,5 +1,4 @@
 import React from 'react';
-import {catalogue} from './catalogue.js';
 import Button from './Button.js';
 
 const Couleurs = (props) => {
