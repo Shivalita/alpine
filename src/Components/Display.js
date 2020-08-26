@@ -53,8 +53,9 @@ const Display = () => {
         ));
     }
 
+    // const source = catalogue.versions[0].images.img2;  // AFFICHER UNE IMAGE 
     // const source = catalogue.versions[1].images.img1;
-    const source = images.configurateur.modele.pure[2].src;
+    const source = images.configurateur.couleur[0].src;
 
 
     return (
