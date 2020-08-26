@@ -32,6 +32,7 @@ import {Container, Card} from 'react-bootstrap';
 const Couleurs = (props) => {
 
   return (
+<<<<<<< HEAD
    <section id="HomeCouleurs">
       <div key={props.data.id} className="CardCouleur" id={props.data.id}>
           <Card className="card m-lg-5 d-inline-block shadow" style={{ width: "25rem", border: "none"}}>
@@ -42,6 +43,16 @@ const Couleurs = (props) => {
           </Card>
       </div>
   </section>  
+=======
+    <div key={props.data.id} className="col-sm-3 card center" id={props.data.id}>
+        <div className="card-body text-center">
+            <h5 className="card-title">{props.data.option}</h5>
+            <h6>{props.data.prix}</h6>
+            {/* <img src={props.data.images.img1} alt="toto"></img> */}
+            <Button choice={props} category={'couleur'}/>
+        </div>
+    </div>
+>>>>>>> 599b4c16e8a481c5e157703d95bd02f19dd9711d
   )
 }
 
