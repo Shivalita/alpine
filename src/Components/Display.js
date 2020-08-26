@@ -24,6 +24,7 @@ import {catalogue} from './catalogue.js';
 import {images} from './images.js';
 
 import Couleurs from './Couleurs.js';
+import CouleurCars from './CouleurCars.js';
 import Jantes from './Jantes.js';
 import Versions from './Versions.js';
 import { Row } from 'react-bootstrap';
@@ -47,6 +48,13 @@ const Display = () => {
         ));
     }
 
+    // const displayCouleurCars = () => {
+    //   return Object.keys(images.configurateur.modele.selection).map(key => (
+    //     <Couleurs key={images.configurateur.modele.selection[key].id} data={images.configurateur.modele.selection[key]}/>
+    //   ));
+    // }
+    
+
     const displayJantes = () => {
         return Object.keys(catalogue.jantes).map(key => (
           <Jantes key={catalogue.jantes[key].id} data={catalogue.jantes[key]}/>
@@ -69,9 +77,10 @@ const Display = () => {
             {/* <img src={source} alt="toto"></img> */}
             </Row>
             <Row>
-            <Col></Col>
+            <CouleurCars />
+            <Col>
             {displayCouleurs()}
-            <Col></Col>
+            </Col>
             </Row>
             {/* {displayJantes()} */}
           </Container>
