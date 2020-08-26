@@ -1,7 +1,6 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
 
-
 const Button = (props) => {
 
     const dispatch = useDispatch();
@@ -14,7 +13,6 @@ const Button = (props) => {
             'prix' : props.choice.data.prix,
         }
         const chooseOption = () => dispatch({type: "CHOOSE_OPTION", payload: chosen});
-        // {console.log(chosen)}
         return chooseOption();
     }
     
@@ -23,7 +21,6 @@ const Button = (props) => {
             Choisir cette version 
         </button>
     )
-
 }
 
 export default Button;
