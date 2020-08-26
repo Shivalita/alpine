@@ -25,17 +25,20 @@ import {images} from './images.js';
 
 import Couleurs from './Couleurs.js';
 import Jantes from './Jantes.js';
+import Versions from './Versions.js';
+import { Row } from 'react-bootstrap';
+import {Col, Container, Button} from 'react-bootstrap';
 
 // import { useSelector} from 'react-redux';
 
 const Display = () => {
     // const test = useSelector((state) => state.couleur);
 
-    // const displayVersions = () => {
-    //     return Object.keys(catalogue.versions).map(key => (
-    //       <Versions key={catalogue.versions[key].id} data={catalogue.versions[key]}/>
-    //     ));
-    // }
+    const displayVersions = () => {
+        return Object.keys(catalogue.versions).map(key => (
+          <Versions key={catalogue.versions[key].id} data={catalogue.versions[key]}/>
+        ));
+    }
 
 
     const displayCouleurs = () => {
@@ -50,16 +53,32 @@ const Display = () => {
         ));
     }
 
+<<<<<<< HEAD
+    const source = catalogue.versions[0].images.img2;  // AFFICHER UNE IMAGE 
+=======
     // const source = catalogue.versions[1].images.img1;
     const source = images.configurateur.couleur[0].src;
 
+>>>>>>> 599b4c16e8a481c5e157703d95bd02f19dd9711d
 
     return (
-          <div>
+          <Container>
+            <Row>
+              <Col></Col>
+            {displayVersions()}
+              <Col></Col>
+            {/* {displayCouleurs()}
+            {displayJantes()} */}
+            {/* <img src={source} alt="toto"></img> */}
+            </Row>
+            <Row>
+            <Col></Col>
             {displayCouleurs()}
-            {displayJantes()}
-            <img src={source} alt="toto"></img>
-          </div>
+            <Col></Col>
+            </Row>
+            {/* {displayJantes()} */}
+          </Container>
+          
     )
 
     // return (
