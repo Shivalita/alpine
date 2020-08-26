@@ -7,6 +7,7 @@ import Versions from './Versions.js';
 import Couleurs from './Couleurs.js';
 import Jantes from './Jantes.js';
 import Scellerie from './Scellerie.js';
+import CouleurCars from './CouleurCars';
 
 
 const Display = () => {
@@ -22,6 +23,13 @@ const Display = () => {
           <Couleurs key={catalogue.couleurs[key].id} data={catalogue.couleurs[key]}/>
         ));
     }
+
+    // const displayCouleurCars = () => {
+    //   return Object.keys(images.configurateur.modele.selection).map(key => (
+    //     <Couleurs key={images.configurateur.modele.selection[key].id} data={images.configurateur.modele.selection[key]}/>
+    //   ));
+    // }
+    
 
     const displayJantes = () => {
         return Object.keys(catalogue.jantes).map(key => (
@@ -40,29 +48,23 @@ const Display = () => {
 
 
     return (
-
-      <Container>
-        <Row>
-          <Col></Col>
-        {displayVersions()}
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col></Col>
-          {displayCouleurs()}
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col></Col>
-          {displayJantes()}
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col></Col>
-          {displayScellerie()}
-          <Col></Col>
-        </Row>
-      </Container>
+          <Container>
+            <Row>
+              <Col></Col>
+            {displayVersions()}
+              <Col></Col>
+            {/* {displayCouleurs()}
+            {displayJantes()} */}
+            {/* <img src={source} alt="toto"></img> */}
+            </Row>
+            <Row>
+            <CouleurCars />
+            <Col>
+            {displayCouleurs()}
+            </Col>
+            </Row>
+            {/* {displayJantes()} */}
+          </Container>
           
     )
 }
