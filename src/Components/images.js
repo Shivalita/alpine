@@ -115,10 +115,12 @@ export const images = {
         'modele' : {
             'selection' : [
                 {
+                    'id' : 0,
                     'name' : 'pure',
                     'src' : modele_selection_pure
                 },
                 {
+                    'id' : 1,
                     'name' : 'legende',
                     'src' : modele_selection_legende
                 }
