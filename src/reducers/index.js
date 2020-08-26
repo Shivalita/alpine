@@ -22,34 +22,90 @@ const initialState = {
         }, montant: 0, id: 6 }
       },
     total: {montant: 0}
-  };
+};
    
   function rootReducer(state = initialState, action) {
 
     if(action.type === "CHOOSE_OPTION"){
       const chosen = action.payload;
-      const category = chosen.category
+      const category = chosen.category;
       
       switch(category) {
+        case 'version':
+          console.log(state)
+          return  {...state,
+            couleur: { ...state.personnalisation.version,
+              option: state.personnalisation.version.option = chosen.option,
+              montant: state.personnalisation.version.montant = chosen.prix
+            },
+            total: { ...state.total,
+              montant: state.total.montant =
+              (state.personnalisation.version.montant) + 
+              (state.personnalisation.couleur.montant) + 
+              (state.personnalisation.jantes.montant) + 
+              (state.personnalisation.scellerie.montant) + 
+              (state.personnalisation.equipements.montant) + 
+              (state.personnalisation.accessoires.montant)
+            }
+          }
+
         case 'couleur':
           console.log(state)
+
           return  {...state,
             couleur: { ...state.personnalisation.couleur,
               option: state.personnalisation.couleur.option = chosen.option,
-              montant: state.personnalisation.couleur.montant += chosen.prix
-            }
+              montant: state.personnalisation.couleur.montant = chosen.prix
+            },
+            total: { ...state.total,
+              montant: state.total.montant =
+              (state.personnalisation.version.montant) + 
+              (state.personnalisation.couleur.montant) + 
+              (state.personnalisation.jantes.montant) + 
+              (state.personnalisation.scellerie.montant) + 
+              (state.personnalisation.equipements.montant) + 
+              (state.personnalisation.accessoires.montant)
           }
-          break;
+        }
+
         case 'jantes':
           console.log(state)
           return  {...state,
             couleur: { ...state.personnalisation.jantes,
               option: state.personnalisation.jantes.option = chosen.option,
-              montant: state.personnalisation.jantes.montant += chosen.prix
+              montant: state.personnalisation.jantes.montant = chosen.prix
+            },
+            total: { ...state.total,
+              montant: state.total.montant =
+              (state.personnalisation.version.montant) + 
+              (state.personnalisation.couleur.montant) + 
+              (state.personnalisation.jantes.montant) + 
+              (state.personnalisation.scellerie.montant) + 
+              (state.personnalisation.equipements.montant) + 
+              (state.personnalisation.accessoires.montant)
             }
           }
-          break;
+
+          case 'scellerie':
+          console.log(state)
+          return  {...state,
+            couleur: { ...state.personnalisation.scellerie,
+              option: state.personnalisation.scellerie.option = chosen.option,
+              montant: state.personnalisation.scellerie.montant = chosen.prix
+            },
+            total: { ...state.total,
+              montant: state.total.montant =
+              (state.personnalisation.version.montant) + 
+              (state.personnalisation.couleur.montant) + 
+              (state.personnalisation.jantes.montant) + 
+              (state.personnalisation.scellerie.montant) + 
+              (state.personnalisation.equipements.montant) + 
+              (state.personnalisation.accessoires.montant)
+            }
+          }
       }
+
+     
       
     }
     

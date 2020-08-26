@@ -1,49 +1,21 @@
-// import React from 'react';
-// import {catalogue} from './catalogue.js';
-// // import { useSelector} from 'react-redux';
-// import Display from './Display.js';
-
-// const Couleurs = () => {
-//   // const stateCouleurs = useSelector((state) => state.couleur);
-//   const colors = catalogue.couleurs;
-
-//   const displayCouleurs = () => {
-//     return Object.keys(colors).map(key => (
-//       <Display key={colors[key].id} couleur={colors[key]} />
-//     ));
-//   }
-
-//     return (
-//       <div>
-//         {/* {console.log(colors)} */}
-//         {/* {console.log(displayCouleurs())} */}
-
-//         {displayCouleurs()}
-//       </div>
-//     )
-// }
-
-// export default Couleurs;
-
 import React from 'react';
 import Button from './Button.js';
 import {Container, Card, Col, Row} from 'react-bootstrap';
 import {images} from './images.js';
 import './App.css';
 
-
 const Couleurs = (props) => {
 
   const DisplayImage = (option) => {
     if (option === 'Teinte spéciale Bleu Alpine') {
-      const color = images.configurateur.couleur[1].src;
-      return color;
+      const src = images.configurateur.couleur[1].src;
+      return src;
     } else if (option === 'Teinte métallisée Noir Profond') {
-      const color = images.configurateur.couleur[2].src;
-      return color;
+      const src = images.configurateur.couleur[2].src;
+      return src;
     } else if (option === 'Peinture opaque Blanc Glacier') {
-      const color = images.configurateur.couleur[0].src;
-      return color;
+      const src = images.configurateur.couleur[0].src;
+      return src;
     }
   }
 
@@ -63,6 +35,7 @@ const Couleurs = (props) => {
   
 
   return (
+
    <section id="HomeCouleurs">
       {/* <div>
         <Card className="card m-lg-5 d-inline-block shadow" style={{ width: "10rem", border: "none"}}>
@@ -89,6 +62,7 @@ const Couleurs = (props) => {
           </Col>
       </div>
   </section>  
+
   )
 }
 

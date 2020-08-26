@@ -1,46 +1,22 @@
-// import React from 'react';
-// import Button from './Button.js';
-// import { useSelector} from 'react-redux';
-
-// const Display = (props) => {
-//     const test = useSelector((state) => state.couleur);
-
-//     return (
-//         <div key={props.couleur.id} className="col-sm-3 card center" id={props.couleur.id}>
-//             {/* {console.log(data)} */}
-//             <div className="card-body text-center">
-//                 <h5 className="card-title">{props.couleur.option}</h5>
-//                 <h6>{props.couleur.prix}</h6>
-//                 <Button data={props}/>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Display;
-
 import React from 'react';
 import {catalogue} from './catalogue.js';
 import {images} from './images.js';
-
-import Couleurs from './Couleurs.js';
-import CouleurCars from './CouleurCars.js';
-import Jantes from './Jantes.js';
-import Versions from './Versions.js';
 import { Row } from 'react-bootstrap';
 import {Col, Container, Button} from 'react-bootstrap';
+import Versions from './Versions.js';
+import Couleurs from './Couleurs.js';
+import Jantes from './Jantes.js';
+import Scellerie from './Scellerie.js';
+import CouleurCars from './CouleurCars';
 
-// import { useSelector} from 'react-redux';
 
 const Display = () => {
-    // const test = useSelector((state) => state.couleur);
 
     const displayVersions = () => {
         return Object.keys(catalogue.versions).map(key => (
           <Versions key={catalogue.versions[key].id} data={catalogue.versions[key]}/>
         ));
     }
-
 
     const displayCouleurs = () => {
         return Object.keys(catalogue.couleurs).map(key => (
@@ -61,9 +37,14 @@ const Display = () => {
         ));
     }
 
+    const displayScellerie = () => {
+      return Object.keys(catalogue.scellerie).map(key => (
+        <Scellerie key={catalogue.scellerie[key].id} data={catalogue.scellerie[key]}/>
+      ));
+  }
+
     // const source = catalogue.versions[0].images.img2;  // AFFICHER UNE IMAGE 
-    // const source = catalogue.versions[1].images.img1;
-    const source = images.configurateur.couleur[0].src;
+    // const source = images.configurateur.couleur[0].src;
 
 
     return (
@@ -86,17 +67,6 @@ const Display = () => {
           </Container>
           
     )
-
-    // return (
-    //     <div key={props.couleur.id} className="col-sm-3 card center" id={props.couleur.id}>
-    //         {/* {console.log(data)} */}
-    //         <div className="card-body text-center">
-    //             <h5 className="card-title">{props.couleur.option}</h5>
-    //             <h6>{props.couleur.prix}</h6>
-    //             <Button data={props}/>
-    //         </div>
-    //     </div>
-    // )
 }
 
 export default Display;
