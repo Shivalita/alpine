@@ -17,15 +17,15 @@ const Jantes = (props) => {
         }
     }
 
-  return (
+    return (
 
-    <div key={props.data.id} className="col-sm-3 card center" id={props.data.id}>
-        <div className="card-body text-center">
-            <h5 className="card-title">{props.data.option}</h5>
-            <h6>{props.data.prix}</h6>
-            <Button choice={props} category={'jantes'}/>
+        <div key={props.data.id} className="col-sm-3 card center" id={props.data.id}>
+            <div className="card-body text-center">
+                <h5 className="card-title">{props.data.option}</h5>
+                <h6>{props.data.prix}</h6>
+                <Button choice={props} category={'jantes'}/>
+            </div>
         </div>
-    </div>
 
     )
 }
