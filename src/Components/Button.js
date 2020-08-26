@@ -17,7 +17,7 @@ const Button = (props) => {
     }
     
     return (
-        <button type="button" onClick={() => storeChoice(props)} className="btn btn-primary shadow-lg ">
+        <button type="button" onClick={() => storeChoice(props)} className="btn btn-primary ">
             Choisir cette version 
         </button>
     )
