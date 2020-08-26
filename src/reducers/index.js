@@ -1,32 +1,52 @@
 const initialState = {
+
     personnalisation: {
         version: { option: "", montant: 0, id: 1 },
+
         couleur: { option: "", montant: 0, id: 2 },
+
         jantes: { option: "", montant: 0, id: 3 },
+
         scellerie: { option: "", montant: 0, id: 4 },
-        equipements: { options: {
-            design: {option: "", id: 1 },
-            media: {option: "", id: 2 },
-            confort: {option: "", id: 3 },
-            conduite: {option: "", id: 4 },
-            securite: {option: "", id: 5 },
-            perso_ext: {option: "", id: 6 },
-            perso_int: {option: "", id: 7 },
-        }, montant: 0, id: 5 },
-        accessoires: { options: {
-            transport: {option: "", id: 1 },
-            multimedia: {option: "", id: 2 },
-            interieur: {option: "", id: 3 },
-            materiel: {option: "", id: 4 },
-            exterieur: {option: "", id: 5 }
-        }, montant: 0, id: 6 }
+
+        equipements: { 
+            options: {
+              design: { option: "", id: 1 },
+              media: { option: "", id: 2 },
+              confort: { option: "", id: 3 },
+              conduite: { option: "", id: 4 },
+              securite: { option: "", id: 5 },
+              perso_ext: { option: "", id: 6 },
+              perso_int: { option: "", id: 7 },
+            }, 
+            montant: 0, id: 5 
+        },
+
+        accessoires: {  
+            options: {
+              transport: { option: "", id: 1 },
+              multimedia: { option: "", id: 2 },
+              interieur: { option: "", id: 3 },
+              materiel: { option: "", id: 4 },
+              exterieur: { option: "", id: 5 }
+            }, 
+            montant: 0, id: 6 
+        }
       },
-    total: {montant: 0}
+      
+    carrousel : {
+        img1: { src: "", id: 1 },
+        img2: { src: "", id: 2 },
+        img3: { src: "", id: 3 },
+        img4: { src: "", id: 4 }
+    },
+
+    total: { montant: 0 }
 };
    
   function rootReducer(state = initialState, action) {
 
-    if(action.type === "CHOOSE_OPTION"){
+    if (action.type === "CHOOSE_OPTION") {
       const chosen = action.payload;
       const category = chosen.category;
       
@@ -104,39 +124,8 @@ const initialState = {
             }
           }
       }
-
-     
-      
     }
     
-    // if(action.type === "HIT_BACK"){
-    //     const id = action.payload
-    //     return  {...state,
-    //             players: { ...state.players,
-    //                       [id] : { ...state.players[id], 
-    //                             pv: state.players[id].pv -5 }
-    //                     }
-    //     }
-    //   }
-
-    // if(action.type === "CHOOSE_COLOR"){
-    //     const id = action.payload;
-    //     return  {...state,
-    //         couleur: { ...state.couleur,
-    //             [id] : { ...state.couleur[id], 
-    //                 pv: state.players[id].pv -5 }
-    //         }
-    //   }
-    // }
-    // if(action.type === "HIT_BACK"){
-    //   const id = action.payload
-    //   return  {...state,
-    //           players: { ...state.players,
-    //                     [id] : { ...state.players[id], 
-    //                           pv: state.players[id].pv -5 }
-    //                   }
-    //   }
-    // }
     return state;
   };
    

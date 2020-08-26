@@ -12,6 +12,7 @@ const Button = (props) => {
             'option' : props.choice.data.option,
             'prix' : props.choice.data.prix,
         }
+        
         const chooseOption = () => dispatch({type: "CHOOSE_OPTION", payload: chosen});
         return chooseOption();
     }
