@@ -8,11 +8,11 @@ const Versions = (props) => {
   
   const DisplayImage = (option) => {
     if (option === 'Pure') {
-      const color = images.configurateur.modele.selection[0].src;
-      return color;
+      const src = images.configurateur.modele.selection[0].src;
+      return src;
     } else if (option === 'Legende') {
-      const color = images.configurateur.modele.selection[1].src;
-      return color;
+      const src = images.configurateur.modele.selection[1].src;
+      return src;
     }
   }
 

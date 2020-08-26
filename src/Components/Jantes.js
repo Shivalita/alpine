@@ -6,14 +6,14 @@ const Jantes = (props) => {
 
     const DisplayImage = (option) => {
         if (option === 'Standard') {
-          const color = images.configurateur.couleur[0].src;
-          return color;
+          const src = images.configurateur.couleur[0].src;
+          return src;
         } else if (option === 'Serac') {
-          const color = images.configurateur.couleur[1].src;
-          return color;
+          const src = images.configurateur.couleur[1].src;
+          return src;
         } else if (option === 'Legende') {
-          const color = images.configurateur.couleur[2].src;
-          return color;
+          const src = images.configurateur.couleur[2].src;
+          return src;
         }
     }
 

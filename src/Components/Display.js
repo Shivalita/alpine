@@ -1,11 +1,13 @@
 import React from 'react';
 import {catalogue} from './catalogue.js';
 import {images} from './images.js';
-import Couleurs from './Couleurs.js';
-import Jantes from './Jantes.js';
-import Versions from './Versions.js';
 import { Row } from 'react-bootstrap';
 import {Col, Container, Button} from 'react-bootstrap';
+import Versions from './Versions.js';
+import Couleurs from './Couleurs.js';
+import Jantes from './Jantes.js';
+import Scellerie from './Scellerie.js';
+
 
 const Display = () => {
 
@@ -27,12 +29,18 @@ const Display = () => {
         ));
     }
 
+    const displayScellerie = () => {
+      return Object.keys(catalogue.scellerie).map(key => (
+        <Scellerie key={catalogue.scellerie[key].id} data={catalogue.scellerie[key]}/>
+      ));
+  }
+
     // const source = catalogue.versions[0].images.img2;  // AFFICHER UNE IMAGE 
-    const source = images.configurateur.couleur[0].src;
+    // const source = images.configurateur.couleur[0].src;
 
 
     return (
-      
+
       <Container>
         <Row>
           <Col></Col>
@@ -47,6 +55,11 @@ const Display = () => {
         <Row>
           <Col></Col>
           {displayJantes()}
+          <Col></Col>
+        </Row>
+        <Row>
+          <Col></Col>
+          {displayScellerie()}
           <Col></Col>
         </Row>
       </Container>

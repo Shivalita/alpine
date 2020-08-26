@@ -7,14 +7,14 @@ const Couleurs = (props) => {
 
   const DisplayImage = (option) => {
     if (option === 'Teinte spéciale Bleu Alpine') {
-      const color = images.configurateur.couleur[1].src;
-      return color;
+      const src = images.configurateur.couleur[1].src;
+      return src;
     } else if (option === 'Teinte métallisée Noir Profond') {
-      const color = images.configurateur.couleur[2].src;
-      return color;
+      const src = images.configurateur.couleur[2].src;
+      return src;
     } else if (option === 'Peinture opaque Blanc Glacier') {
-      const color = images.configurateur.couleur[0].src;
-      return color;
+      const src = images.configurateur.couleur[0].src;
+      return src;
     }
   }
 
@@ -30,7 +30,7 @@ const Couleurs = (props) => {
           </Card>
       </div>
   </section>  
-  
+
   )
 }
 
