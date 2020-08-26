@@ -53,13 +53,9 @@ const Display = () => {
         ));
     }
 
-<<<<<<< HEAD
-    const source = catalogue.versions[0].images.img2;  // AFFICHER UNE IMAGE 
-=======
     // const source = catalogue.versions[1].images.img1;
     const source = images.configurateur.modele.pure[2].src;
 
->>>>>>> 599b4c16e8a481c5e157703d95bd02f19dd9711d
 
     return (
           <Container>
