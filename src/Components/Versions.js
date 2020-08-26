@@ -25,7 +25,7 @@ const Versions = (props) => {
           <Card.Body>
             <Card.Title>{props.data.option}</Card.Title>
             <Card.Text>à partir de {props.data.prix} €</Card.Text>
-            <Button />
+            <Button  choice={props} category={'version'}/>
           </Card.Body>
         </Card>
       </div>
