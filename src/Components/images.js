@@ -97,7 +97,7 @@ import fixation_extincteur from '../images/configurateur/accessoires/transport e
 import kit_securite from '../images/configurateur/accessoires/transport et protection/kit-securite.jpg';
 import protection_obd from '../images/configurateur/accessoires/transport et protection/protection-obd.jpg';
 
-import alpine_A110 from '../images/sources-homepage/A110/Alpine-A110-1.png';
+// import alpine_A110 from '../images/sources-homepage/A110/Alpine-A110-1.png';
 // import alpine_A110 from '../images/sources-homepage/A110/Alpine-A110-1.png';
 
 
@@ -660,217 +660,217 @@ export const images = {
         }
     },
 
-    'sources_homepage' : {
-        'A110' : [
-            {
-                'id' : 0,
-                'name' : 'alpine_A110',
-                'src' : alpine_A110
-            },
-            {
-                'id' : 1,
-                'name' : 'presentation',
-                'src' : presentation
-            }
-        ],
+    // 'sources_homepage' : {
+    //     'A110' : [
+    //         {
+    //             'id' : 0,
+    //             'name' : 'alpine_A110',
+    //             'src' : alpine_A110
+    //         },
+    //         {
+    //             'id' : 1,
+    //             'name' : 'presentation',
+    //             'src' : presentation
+    //         }
+    //     ],
 
-        'caracteristiques' : [
-            {
-                'id' : 0,
-                'name' : 'dimensions',
-                'src' : dimensions
-            },
-            {
-                'id' : 1,
-                'name' : 'performances',
-                'src' : performances
-            },
-            {
-                'id' : 2,
-                'name' : 'transmission',
-                'src' : transmission
-            }
-        ],
+    //     'caracteristiques' : [
+    //         {
+    //             'id' : 0,
+    //             'name' : 'dimensions',
+    //             'src' : dimensions
+    //         },
+    //         {
+    //             'id' : 1,
+    //             'name' : 'performances',
+    //             'src' : performances
+    //         },
+    //         {
+    //             'id' : 2,
+    //             'name' : 'transmission',
+    //             'src' : transmission
+    //         }
+    //     ],
 
-        'conception' : [
-            {
-                'id' : 0,
-                'name' : 'alpine_bone',
-                'src' : alpine_bone
-            },
-            {
-                'id' : 1,
-                'name' : 'alpine_skin',
-                'src' : alpine_skin
-            },
-            {
-                'id' : 2,
-                'name' : 'visuel_legerete',
-                'src' : visuel_legerete
-            }
-        ],
+    //     'conception' : [
+    //         {
+    //             'id' : 0,
+    //             'name' : 'alpine_bone',
+    //             'src' : alpine_bone
+    //         },
+    //         {
+    //             'id' : 1,
+    //             'name' : 'alpine_skin',
+    //             'src' : alpine_skin
+    //         },
+    //         {
+    //             'id' : 2,
+    //             'name' : 'visuel_legerete',
+    //             'src' : visuel_legerete
+    //         }
+    //     ],
 
-        'design' : [
-            {
-                'id' : 0,
-                'name' : 'duo_left',
-                'src' : duo_left
-            },
-            {
-                'id' : 1,
-                'name' : 'duo_right',
-                'src' : duo_right
-            },
-            {
-                'id' : 2,
-                'name' : 'moteur',
-                'src' : moteur
-            },
-            {
-                'id' : 3,
-                'name' : 'visuel1',
-                'src' : visuel1
-            },
-            {
-                'id' : 4,
-                'name' : 'visuel3',
-                'src' : visuel3
-            }
-        ],
+    //     'design' : [
+    //         {
+    //             'id' : 0,
+    //             'name' : 'duo_left',
+    //             'src' : duo_left
+    //         },
+    //         {
+    //             'id' : 1,
+    //             'name' : 'duo_right',
+    //             'src' : duo_right
+    //         },
+    //         {
+    //             'id' : 2,
+    //             'name' : 'moteur',
+    //             'src' : moteur
+    //         },
+    //         {
+    //             'id' : 3,
+    //             'name' : 'visuel1',
+    //             'src' : visuel1
+    //         },
+    //         {
+    //             'id' : 4,
+    //             'name' : 'visuel3',
+    //             'src' : visuel3
+    //         }
+    //     ],
 
-        'galerie' : [
-            {
-                'id' : 0,
-                'name' : 'A110_legende1',
-                'src' : A110_legende1
-            },
-            {
-                'id' : 1,
-                'name' : 'A110_legende5',
-                'src' : A110_legende5
-            },
-            {
-                'id' : 2,
-                'name' : 'A110_legende9',
-                'src' : A110_legende9
-            },
-            {
-                'id' : 3,
-                'name' : 'A110_PE1',
-                'src' : A110_PE1
-            },
-            {
-                'id' : 4,
-                'name' : 'A110_PE7',
-                'src' : A110_PE7
-            },
-            {
-                'id' : 5,
-                'name' : 'A110_PE9',
-                'src' : A110_PE9
-            },
-            {
-                'id' : 6,
-                'name' : 'A110_pure4',
-                'src' : A110_pure4
-            },
-            {
-                'id' : 7,
-                'name' : 'A110_pure6',
-                'src' : A110_pure6
-            },
-            {
-                'id' : 8,
-                'name' : 'A110_pure8',
-                'src' : A110_pure8
-            }
-        ],
+    //     'galerie' : [
+    //         {
+    //             'id' : 0,
+    //             'name' : 'A110_legende1',
+    //             'src' : A110_legende1
+    //         },
+    //         {
+    //             'id' : 1,
+    //             'name' : 'A110_legende5',
+    //             'src' : A110_legende5
+    //         },
+    //         {
+    //             'id' : 2,
+    //             'name' : 'A110_legende9',
+    //             'src' : A110_legende9
+    //         },
+    //         {
+    //             'id' : 3,
+    //             'name' : 'A110_PE1',
+    //             'src' : A110_PE1
+    //         },
+    //         {
+    //             'id' : 4,
+    //             'name' : 'A110_PE7',
+    //             'src' : A110_PE7
+    //         },
+    //         {
+    //             'id' : 5,
+    //             'name' : 'A110_PE9',
+    //             'src' : A110_PE9
+    //         },
+    //         {
+    //             'id' : 6,
+    //             'name' : 'A110_pure4',
+    //             'src' : A110_pure4
+    //         },
+    //         {
+    //             'id' : 7,
+    //             'name' : 'A110_pure6',
+    //             'src' : A110_pure6
+    //         },
+    //         {
+    //             'id' : 8,
+    //             'name' : 'A110_pure8',
+    //             'src' : A110_pure8
+    //         }
+    //     ],
 
-        'interieur' : [
-            {
-                'id' : 0,
-                'name' : 'interieur',
-                'src' : interieur
-            },
-            {
-                'id' : 1,
-                'name' : 'interieur2',
-                'src' : interieur2
-            }
-        ],
+    //     'interieur' : [
+    //         {
+    //             'id' : 0,
+    //             'name' : 'interieur',
+    //             'src' : interieur
+    //         },
+    //         {
+    //             'id' : 1,
+    //             'name' : 'interieur2',
+    //             'src' : interieur2
+    //         }
+    //     ],
 
-        'logo' : [
-            {
-                'id' : 0,
-                'name' : 'logo',
-                'src' : logo
-            },
-            {
-                'id' : 1,
-                'name' : 'logo_white',
-                'src' : logo_white
-            }
-        ],
+    //     'logo' : [
+    //         {
+    //             'id' : 0,
+    //             'name' : 'logo',
+    //             'src' : logo
+    //         },
+    //         {
+    //             'id' : 1,
+    //             'name' : 'logo_white',
+    //             'src' : logo_white
+    //         }
+    //     ],
 
-        'motorisation' : [
-            {
-                'id' : 0,
-                'name' : 'moteur_cinemagraph_movie',
-                'src' : moteur_cinemagraph_movie
-            },
-            {
-                'id' : 1,
-                'name' : 'turbo',
-                'src' : turbo
-            }
-        ],
+    //     'motorisation' : [
+    //         {
+    //             'id' : 0,
+    //             'name' : 'moteur_cinemagraph_movie',
+    //             'src' : moteur_cinemagraph_movie
+    //         },
+    //         {
+    //             'id' : 1,
+    //             'name' : 'turbo',
+    //             'src' : turbo
+    //         }
+    //     ],
 
-        'technologie' : [
-            {
-                'id' : 0,
-                'name' : 'center_of_gravity_movie',
-                'src' : center_of_gravity_movie
-            },
-            {
-                'id' : 1,
-                'name' : 'disque_frein',
-                'src' : disque_frein
-            },
-            {
-                'id' : 2,
-                'name' : 'technical_front_wheel',
-                'src' : technical_front_wheel
-            },
-            {
-                'id' : 3,
-                'name' : 'technical_rear_wheel',
-                'src' : technical_rear_wheel
-            }
-        ],
+    //     'technologie' : [
+    //         {
+    //             'id' : 0,
+    //             'name' : 'center_of_gravity_movie',
+    //             'src' : center_of_gravity_movie
+    //         },
+    //         {
+    //             'id' : 1,
+    //             'name' : 'disque_frein',
+    //             'src' : disque_frein
+    //         },
+    //         {
+    //             'id' : 2,
+    //             'name' : 'technical_front_wheel',
+    //             'src' : technical_front_wheel
+    //         },
+    //         {
+    //             'id' : 3,
+    //             'name' : 'technical_rear_wheel',
+    //             'src' : technical_rear_wheel
+    //         }
+    //     ],
 
-        'versions' : [
-            {
-                'id' : 0,
-                'name' : 'alpine_legende',
-                'src' : alpine_legende
-            },
-            {
-                'id' : 1,
-                'name' : 'alpine_pure',
-                'src' : alpine_pure
-            },
-            {
-                'id' : 2,
-                'name' : 'compo_legende',
-                'src' : compo_legende
-            },
-            {
-                'id' : 3,
-                'name' : 'compo_pure',
-                'src' : compo_pure
-            }
-        ],
+    //     'versions' : [
+    //         {
+    //             'id' : 0,
+    //             'name' : 'alpine_legende',
+    //             'src' : alpine_legende
+    //         },
+    //         {
+    //             'id' : 1,
+    //             'name' : 'alpine_pure',
+    //             'src' : alpine_pure
+    //         },
+    //         {
+    //             'id' : 2,
+    //             'name' : 'compo_legende',
+    //             'src' : compo_legende
+    //         },
+    //         {
+    //             'id' : 3,
+    //             'name' : 'compo_pure',
+    //             'src' : compo_pure
+    //         }
+    //     ],
 
-    }
+    // }
     
 }
