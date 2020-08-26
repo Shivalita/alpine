@@ -1,8 +1,7 @@
 import React from 'react';
-import {catalogue} from './catalogue.js';
 import Button from './Button.js';
 
-const Couleurs = (props) => {
+const Jantes = (props) => {
 
   return (
     <div key={props.data.id} className="col-sm-3 card center" id={props.data.id}>
@@ -17,4 +16,4 @@ const Couleurs = (props) => {
 )
 }
 
-export default Couleurs;
+export default Jantes;

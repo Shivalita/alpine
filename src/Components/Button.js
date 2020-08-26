@@ -1,6 +1,7 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
 
+
 const Button = (props) => {
 
     const dispatch = useDispatch();
@@ -18,8 +19,8 @@ const Button = (props) => {
     }
     
     return (
-        <button type="button" onClick={() => storeChoice(props)} className="btn btn-success material-tooltip-main ">
-            choose
+        <button type="button" onClick={() => storeChoice(props)} className="btn btn-primary shadow-lg ">
+            Choisir cette version 
         </button>
     )
 

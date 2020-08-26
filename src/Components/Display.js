@@ -24,6 +24,8 @@ import {catalogue} from './catalogue.js';
 import Couleurs from './Couleurs.js';
 import Jantes from './Jantes.js';
 import Versions from './Versions.js';
+import { Row } from 'react-bootstrap';
+import {Col, Container, Button} from 'react-bootstrap';
 
 // import { useSelector} from 'react-redux';
 
@@ -35,6 +37,7 @@ const Display = () => {
           <Versions key={catalogue.versions[key].id} data={catalogue.versions[key]}/>
         ));
     }
+
 
     const displayCouleurs = () => {
         return Object.keys(catalogue.couleurs).map(key => (
@@ -48,12 +51,26 @@ const Display = () => {
         ));
     }
 
+    const source = catalogue.versions[0].images.img2;  // AFFICHER UNE IMAGE 
+
     return (
-          <div>
+          <Container>
+            <Row>
+              <Col></Col>
             {displayVersions()}
+              <Col></Col>
+            {/* {displayCouleurs()}
+            {displayJantes()} */}
+            {/* <img src={source} alt="toto"></img> */}
+            </Row>
+            <Row>
+            <Col></Col>
             {displayCouleurs()}
-            {displayJantes()}
-          </div>
+            <Col></Col>
+            </Row>
+            {/* {displayJantes()} */}
+          </Container>
+          
     )
 
     // return (
