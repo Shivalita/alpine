@@ -1,13 +1,13 @@
 const initialState = {
 
     personnalisation: {
-        version: { option: "", montant: 0, id: 1 },
+        version: { option: "Pure", montant: 54700, id: 1 },
 
-        couleur: { option: "", montant: 0, id: 2 },
+        couleur: { option: "Peinture opaque Blanc Glacier", montant: 0, id: 2 },
 
-        jantes: { option: "", montant: 0, id: 3 },
+        jantes: { option: "Standard", montant: 0, id: 3 },
 
-        scellerie: { option: "", montant: 0, id: 4 },
+        scellerie: { option: "Sièges baquets en cuir noir et Dinamica", montant: 0, id: 4 },
 
         equipements: { 
             options: {

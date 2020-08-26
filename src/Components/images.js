@@ -1,9 +1,29 @@
 import modele_selection_pure from '../images/configurateur/modele/selection/pure.png';
 import modele_selection_legende from '../images/configurateur/modele/selection/legende.png';
+import modele_pure_blanc_standard1 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (1).jpg';
+import modele_pure_blanc_standard2 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (2).jpg';
+import modele_pure_blanc_standard3 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (3).jpg';
+import modele_pure_blanc_standard4 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (4).jpg';
 import modele_pure_blanc_serac1 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_serac (1).jpg';
 import modele_pure_blanc_serac2 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_serac (2).jpg';
 import modele_pure_blanc_serac3 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_serac (3).jpg';
 import modele_pure_blanc_serac4 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_serac (4).jpg';
+import modele_pure_bleu_standard1 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_standard (1).jpg';
+import modele_pure_bleu_standard2 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_standard (2).jpg';
+import modele_pure_bleu_standard3 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_standard (3).jpg';
+import modele_pure_bleu_standard4 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_standard (4).jpg';
+import modele_pure_bleu_serac1 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_serac (1).jpg';
+import modele_pure_bleu_serac2 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_serac (2).jpg';
+import modele_pure_bleu_serac3 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_serac (3).jpg';
+import modele_pure_bleu_serac4 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_serac (4).jpg';
+import modele_pure_noir_standard1 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_standard (1).jpg';
+import modele_pure_noir_standard2 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_standard (2).jpg';
+import modele_pure_noir_standard3 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_standard (3).jpg';
+import modele_pure_noir_standard4 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_standard (4).jpg';
+import modele_pure_noir_serac1 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_serac (1).jpg';
+import modele_pure_noir_serac2 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_serac (2).jpg';
+import modele_pure_noir_serac3 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_serac (3).jpg';
+import modele_pure_noir_serac4 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_serac (4).jpg';
 import modele_legende_blanc_legende1 from '../images/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-1.jpg';
 import modele_legende_blanc_legende2 from '../images/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-2.jpg';
 import modele_legende_blanc_legende3 from '../images/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-3.jpg';
@@ -157,28 +177,134 @@ export const images = {
                 }
             ],
 
-            'pure' : [
-                {
-                    'id' : 0,
-                    'name' : 'blanc_jantes_serac1',
-                    'src' : modele_pure_blanc_serac1
-                },
-                {
-                    'id' : 1,
-                    'name' : 'blanc_jantes_serac2',
-                    'src' : modele_pure_blanc_serac2
-                },
-                {
-                    'id' : 2,
-                    'name' : 'blanc_jantes_serac3',
-                    'src' : modele_pure_blanc_serac3
-                },
-                {
-                    'id' : 3,
-                    'name' : 'blanc_jantes_serac4',
-                    'src' : modele_pure_blanc_serac4
-                },
-            ],
+            'pure' : {
+                'blanc' : [
+                    {
+                        'id' : 0,
+                        'name' : 'blanc_jantes_standard1',
+                        'src' : modele_pure_blanc_standard1
+                    },
+                    {
+                        'id' : 1,
+                        'name' : 'blanc_jantes_standard2',
+                        'src' : modele_pure_blanc_standard2
+                    },
+                    {
+                        'id' : 2,
+                        'name' : 'blanc_jantes_standard3',
+                        'src' : modele_pure_blanc_standard3
+                    },
+                    {
+                        'id' : 3,
+                        'name' : 'blanc_jantes_standard4',
+                        'src' : modele_pure_blanc_standard4
+                    },
+                    {
+                        'id' : 4,
+                        'name' : 'blanc_jantes_serac1',
+                        'src' : modele_pure_blanc_serac1
+                    },
+                    {
+                        'id' : 5,
+                        'name' : 'blanc_jantes_serac2',
+                        'src' : modele_pure_blanc_serac2
+                    },
+                    {
+                        'id' : 6,
+                        'name' : 'blanc_jantes_serac3',
+                        'src' : modele_pure_blanc_serac3
+                    },
+                    {
+                        'id' : 7,
+                        'name' : 'blanc_jantes_serac4',
+                        'src' : modele_pure_blanc_serac4
+                    }
+                ],
+                'bleu' : [
+                    {
+                        'id' : 0,
+                        'name' : 'bleu_jantes_standard1',
+                        'src' : modele_pure_bleu_standard1
+                    },
+                    {
+                        'id' : 1,
+                        'name' : 'bleu_jantes_standard2',
+                        'src' : modele_pure_bleu_standard2
+                    },
+                    {
+                        'id' : 2,
+                        'name' : 'bleu_jantes_standard3',
+                        'src' : modele_pure_bleu_standard3
+                    },
+                    {
+                        'id' : 3,
+                        'name' : 'bleu_jantes_standard4',
+                        'src' : modele_pure_bleu_standard4
+                    },
+                    {
+                        'id' : 4,
+                        'name' : 'bleu_jantes_serac1',
+                        'src' : modele_pure_bleu_serac1
+                    },
+                    {
+                        'id' : 5,
+                        'name' : 'bleu_jantes_serac2',
+                        'src' : modele_pure_bleu_serac2
+                    },
+                    {
+                        'id' : 6,
+                        'name' : 'bleu_jantes_serac3',
+                        'src' : modele_pure_bleu_serac3
+                    },
+                    {
+                        'id' : 7,
+                        'name' : 'bleu_jantes_serac4',
+                        'src' : modele_pure_bleu_serac4
+                    }
+                ],
+                'noir' : [
+                    {
+                        'id' : 0,
+                        'name' : 'noir_jantes_standard1',
+                        'src' : modele_pure_noir_standard1
+                    },
+                    {
+                        'id' : 1,
+                        'name' : 'noir_jantes_standard2',
+                        'src' : modele_pure_noir_standard2
+                    },
+                    {
+                        'id' : 2,
+                        'name' : 'noir_jantes_standard3',
+                        'src' : modele_pure_noir_standard3
+                    },
+                    {
+                        'id' : 3,
+                        'name' : 'noir_jantes_standard4',
+                        'src' : modele_pure_noir_standard4
+                    },
+                    {
+                        'id' : 4,
+                        'name' : 'noir_jantes_serac1',
+                        'src' : modele_pure_noir_serac1
+                    },
+                    {
+                        'id' : 5,
+                        'name' : 'noir_jantes_serac2',
+                        'src' : modele_pure_noir_serac2
+                    },
+                    {
+                        'id' : 6,
+                        'name' : 'noir_jantes_serac3',
+                        'src' : modele_pure_noir_serac3
+                    },
+                    {
+                        'id' : 7,
+                        'name' : 'noir_jantes_serac4',
+                        'src' : modele_pure_noir_serac4
+                    }
+                ],
+            },
             
             'legende' : [
                 {
