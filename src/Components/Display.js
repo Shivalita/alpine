@@ -9,6 +9,10 @@ import Jantes from "./Jantes.js";
 import Scellerie from "./Scellerie.js";
 import CouleurCars from "./CouleurCars";
 import Prix from "./Prix";
+import ButtonNext from "./ButtonNext";
+import TittleHeading from "./TittleHeading";
+import Equipement from "./Equipement.js";
+import "./Display.css";
 
 const Display = () => {
   
@@ -54,6 +58,15 @@ const Display = () => {
     ));
   };
 
+  const displayEquipement = () => {
+    return Object.keys(catalogue.equipements.design).map((key) => (
+      <Equipement
+        key={catalogue.equipements.design[key].id}
+        data={catalogue.equipements.design[key]}
+      />
+    ));
+  };
+
   // const source = catalogue.versions[0].images.img2;  // AFFICHER UNE IMAGE
   // const source = images.configurateur.couleur[0].src;
 
@@ -67,15 +80,28 @@ const Display = () => {
             {displayJantes()} */}
         {/* <img src={source} alt="toto"></img> */}
       </Row>
-      <h6 className="mb-5 mt-5">Selectionnez la couleur</h6>
+
       <Row className="shadow ">
+<<<<<<< HEAD
         <CouleurCars />
         <Col>{displayCouleurs()}</Col>
 
         {displayJantes()}
 
+=======
+        <CouleurCars className="tittleSideBar " />
+        <Col className="sideBar p-5">
+          <TittleHeading />
+          {displayCouleurs()}
+        </Col>
+        {/* {displayScellerie()} */}
+        {/* {displayJantes()} */}
+        {/* {displayEquipement()} */}
+
+        <Prix/>
+        <ButtonNext />
+>>>>>>> c246c84b0df096d668b6b032d13873a3e42414b3
       </Row>
-      <Prix/>
       {/* {displayJantes()} */}
     </Container>
   );

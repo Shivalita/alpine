@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'; 
 import Logo from "../images/sources-homepage/logo/logo.png";
-import "./App.css";
+import './Headers.css';
 
 
 
@@ -12,7 +12,7 @@ const Headers = () => {
     
     
         return(
-            <Navbar  className="bg-light shadow-sm ">
+            <Navbar  className="HomeHeaders shadow-sm ">
                 <Navbar.Brand ><img src={ Logo } className="Logo" /></Navbar.Brand>
                 <Nav >
                 <NavDropdown title="Menu" id="nav-dropdown">
