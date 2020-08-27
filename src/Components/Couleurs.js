@@ -32,13 +32,8 @@ const Couleurs = (props) => {
               <Col clasName=" col-md-8">
                 <Card.Body className="carBody border-left">
                   <Card.Title>{props.data.option}</Card.Title>
-<<<<<<< HEAD
-                  <Card.Text>{props.data.prix} €</Card.Text>
-                  <Button choice={props} category={'couleur'}/>
-=======
                   <Card.Text className="cardText border-bottom pb-3">{props.data.prix} €</Card.Text>
-                  <Button/>
->>>>>>> c246c84b0df096d668b6b032d13873a3e42414b3
+                  <Button choice={props} category={'couleur'}/>
                 </Card.Body>
               </Col>
             </Row>
