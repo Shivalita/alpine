@@ -2,18 +2,16 @@ import React from "react";
 import Button from "./Button.js";
 import { Container, Card, Carousel } from "react-bootstrap";
 import { images } from "./images.js";
-import './Prix.css';
+import './TittleHeading.css';
 
-
-const Prix = (props) => {
-
+const TittleHeading = (props) => {
 
 
     return(
-        <div className="prixCars mt-5 ml-3">
-            <h4>Modèle Configuré : 100 000 €</h4>
+        <div className="tittleHeading">
+            <h6>Selection de la couleur</h6>
         </div>
     )
 }
 
-export default Prix; 
+export default TittleHeading;

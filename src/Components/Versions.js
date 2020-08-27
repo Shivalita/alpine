@@ -3,6 +3,7 @@ import { catalogue } from "./catalogue.js";
 import { Container, Row, Col,  Card } from "react-bootstrap";
 import Button from "./Button";
 import {images} from './images.js';
+import './Versions.css';
 
 const Versions = (props) => {
   
@@ -24,7 +25,7 @@ const Versions = (props) => {
           <Card.Img className="p-3" variant="top" src={DisplayImage(props.data.option)} />
           <Card.Body>
             <Card.Title>{props.data.option}</Card.Title>
-            <Card.Text>à partir de {props.data.prix} €</Card.Text>
+            <Card.Text  className="cardText border-bottom pb-3">à partir de {props.data.prix} €</Card.Text>
             <Button  choice={props} category={'version'}/>
           </Card.Body>
         </Card>
