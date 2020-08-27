@@ -1,68 +1,62 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
 import { useSelector} from 'react-redux';
 import Button from './Button.js';
-import {Container, Card} from 'react-bootstrap';
+import {Container, Card, Carousel} from 'react-bootstrap';
 import {images} from './images.js';
-
 
 const CouleurCars = (props) => {
 
-  const dispatch = useDispatch();
-  const optionsState = useSelector((state) => state.personnalisation)
-  const carrousel = useSelector((state) => state.carrousel)
-  console.log(optionsState)
-  console.log(optionsState.version.option)
-  console.log(carrousel.img1.src)
+  const carousel = useSelector((state) => state.carousel)
 
-  const selectImages = (optionsState) => {
-      if ((optionsState.version.option === 'Pure') && 
-          (optionsState.couleur.option === 'Peinture opaque Blanc Glacier') &&
-          (optionsState.jantes.option === 'Standard')) {
-              const arrayImages = [
-                  images.configurateur.modele.pure.blanc[0].src,
-                  images.configurateur.modele.pure.blanc[1].src,
-                  images.configurateur.modele.pure.blanc[2].src,
-                  images.configurateur.modele.pure.blanc[3].src
-              ]
-              console.log(arrayImages)
-              return arrayImages;
-      }
-  }
+  const displayImages = () => {
 
-//   const storeChoice = (props) => {
-//     const chosen = {
-//         'category' : props.category,
-//         'id' : props.choice.data.id,
-//         'option' : props.choice.data.option,
-//         'prix' : props.choice.data.prix,
-//     }
-    
-//     const chooseOption = () => dispatch({type: "CHOOSE_OPTION", payload: chosen});
-//     return chooseOption();
-// }
-    
-    // const DisplayCouleurCars = (option) => {
-    //     if (option === 'Pure') {
-    //         const color = images.configurateur.modele.selection[0].src;
-    //         return color;
-    //       } else if (option === 'Legende') {
-    //         const color = images.configurateur.modele.selection[1].src;
-    //         return color;
-    //       }
-    // }
+    return Object.keys(carousel).map((key) => {
+      return(
+      <Carousel.Item key={carousel[key].id}>
+        <img
+          className="d-block w-100"
+          src={carousel[key].src}
+          alt={"Slide " + carousel[key].id}
+        />
+      </Carousel.Item>
+    )});
+  };
 
-    return (
-        <section id="HomeCouleurCars">
-          <div className="CardContainer  " >
-            <Card className="card m-lg-5 d-inline-block shadow" style={{ width: "30rem", border: "none"}}>
-                <Card.Img className="p-3" variant="top" src={images.configurateur.modele.selection[0].src}/>
-            </Card>
-            {selectImages(optionsState)}
-            {displayImages(selectImages(optionsState))}
-            {<img src={selectImages(optionsState)[1]} />}
-          </div>
-        </section>
-    )
-}
+  return (
+    <Carousel className="card m-auto" style={{ width: "40rem", border: "none"}} >
+      {displayImages()}
+      {/* <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={selectImages(optionsState)[0]}
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={selectImages(optionsState)[1]}
+          alt="Third slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={selectImages(optionsState)[2]}
+          alt="Third slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={selectImages(optionsState)[3]}
+          alt="Fourth slide"
+        />
+      </Carousel.Item> */}
+    </Carousel>
+      
+  );
+};
 
 export default CouleurCars;

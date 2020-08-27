@@ -4,6 +4,7 @@ import {Container, Card, Col, Row} from 'react-bootstrap';
 import {images} from './images.js';
 import './App.css';
 
+
 const Couleurs = (props) => {
 
   const DisplayImage = (option) => {
@@ -19,50 +20,27 @@ const Couleurs = (props) => {
     }
   }
 
-  // const DisplayCouleurVoiture = (option) => {
-  //   if (option === 'Teinte spéciale Bleu Alpine') {
-  //     const color = images.configurateur.modele.pure[1].src;
-  //     return color;
-  //   } else if (option === 'Teinte métallisée Noir Profond') {
-  //     const color = images.configurateur.modele.pure[2].src;
-  //     return color;
-  //   } else if (option === 'Peinture opaque Blanc Glacier') {
-  //     const color = images.configurateur.modele.pure[0].src;
-  //     return color;
-  //   }
-  // }
-
-  
-
   return (
-
    <section id="HomeCouleurs">
-      {/* <div>
-        <Card className="card m-lg-5 d-inline-block shadow" style={{ width: "10rem", border: "none"}}>
-          <Card.Img className="p-3" variant="top" src={DisplayCouleurVoiture(props.data.option)} />
-
-        </Card>
-      </div> */}
-      <div key={props.data.id} className="CardCouleur" id={props.data.id}>
-        <Col>
-          <Card className="Card mb-3 shadow " style={{ width: "100% ", border: "none"}}>
+      <div key={props.data.id} className="CardCouleur" style={{ width: "100% ", border: "none"}} id={props.data.id}>
+        <Col >
+          <Card className="Card mt-5 " style={{ width: "100% ", border: "none"}}>
             <Row>
-              <Col className="md-4">
+              <Col className="md-4 m-auto">
                 <Card.Img className="p-3" variant="top" src={DisplayImage(props.data.option)} />
               </Col>
               <Col clasName="col-md-8">
-                <Card.Body>
+                <Card.Body className="shadow-sm">
                   <Card.Title>{props.data.option}</Card.Title>
                   <Card.Text>{props.data.prix} €</Card.Text>
-                  <Button/>
+                  <Button choice={props} category={'couleur'}/>
                 </Card.Body>
               </Col>
             </Row>
           </Card>
           </Col>
       </div>
-  </section>  
-
+    </section>  
   )
 }
 

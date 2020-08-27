@@ -3,7 +3,7 @@ const initialState = {
     personnalisation: {
         version: { option: "Pure", montant: 54700, id: 1 },
 
-        couleur: { option: "Peinture opaque Blanc Glacier", montant: 0, id: 2 },
+        couleur: { option: "Teinte spéciale Bleu Alpine", montant: 0, id: 2 },
 
         jantes: { option: "Standard", montant: 0, id: 3 },
 
@@ -34,11 +34,11 @@ const initialState = {
         }
       },
       
-    carrousel : {
-        img1: { src: "", id: 1 },
-        img2: { src: "", id: 2 },
-        img3: { src: "", id: 3 },
-        img4: { src: "", id: 4 }
+    carousel : {
+        img1: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (1).jpg", id: 0 },
+        img2: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (2).jpg", id: 1 },
+        img3: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (3).jpg", id: 2 },
+        img4: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (4).jpg", id: 3 }
     },
 
     total: { montant: 0 }
@@ -52,11 +52,12 @@ const initialState = {
       
       switch(category) {
         case 'version':
-          console.log(state)
           return  {...state,
-            couleur: { ...state.personnalisation.version,
-              option: state.personnalisation.version.option = chosen.option,
-              montant: state.personnalisation.version.montant = chosen.prix
+            personnalisation: {...state.personnalisation,
+              version: {...state.personnalisation.version,
+                option: state.personnalisation.version.option = chosen.option,
+                montant: state.personnalisation.version.montant = chosen.prix
+              }
             },
             total: { ...state.total,
               montant: state.total.montant =
@@ -70,12 +71,12 @@ const initialState = {
           }
 
         case 'couleur':
-          console.log(state)
-
           return  {...state,
-            couleur: { ...state.personnalisation.couleur,
-              option: state.personnalisation.couleur.option = chosen.option,
-              montant: state.personnalisation.couleur.montant = chosen.prix
+            personnalisation: {...state.personnalisation,
+              couleur: {...state.personnalisation.couleur,
+                option: state.personnalisation.couleur.option = chosen.option,
+                montant: state.personnalisation.couleur.montant = chosen.prix
+              }
             },
             total: { ...state.total,
               montant: state.total.montant =
@@ -89,11 +90,12 @@ const initialState = {
         }
 
         case 'jantes':
-          console.log(state)
           return  {...state,
-            couleur: { ...state.personnalisation.jantes,
-              option: state.personnalisation.jantes.option = chosen.option,
-              montant: state.personnalisation.jantes.montant = chosen.prix
+            personnalisation: {...state.personnalisation,
+              jantes: {...state.personnalisation.jantes,
+                option: state.personnalisation.jantes.option = chosen.option,
+                montant: state.personnalisation.jantes.montant = chosen.prix
+              }
             },
             total: { ...state.total,
               montant: state.total.montant =
@@ -106,12 +108,13 @@ const initialState = {
             }
           }
 
-          case 'scellerie':
-          console.log(state)
+        case 'scellerie':
           return  {...state,
-            couleur: { ...state.personnalisation.scellerie,
-              option: state.personnalisation.scellerie.option = chosen.option,
-              montant: state.personnalisation.scellerie.montant = chosen.prix
+            personnalisation: {...state.personnalisation,
+              scellerie: {...state.personnalisation.scellerie,
+                option: state.personnalisation.scellerie.option = chosen.option,
+                montant: state.personnalisation.scellerie.montant = chosen.prix
+              }
             },
             total: { ...state.total,
               montant: state.total.montant =
@@ -125,6 +128,29 @@ const initialState = {
           }
       }
     }
+
+
+    if (action.type === "UPDATE_CAROUSEL") {
+      const imagesArray = action.payload;
+      // console.log(imagesArray)
+
+      return  {...state,
+        carousel : {...state.carousel,
+          img1: { ...state.carousel.img1,
+            src: state.carousel.img1.src = imagesArray[0],
+          },
+          img2: { ...state.carousel.img2,
+            src: state.carousel.img1.src = imagesArray[1],
+          },
+          img3: { ...state.carousel.img3,
+            src: state.carousel.img1.src = imagesArray[2],
+          },
+          img4: { ...state.carousel.img4,
+            src: state.carousel.img1.src = imagesArray[3],
+          }
+      }
+    }
+  }
     
     return state;
   };
