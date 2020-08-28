@@ -6,10 +6,19 @@ import './TittleHeading.css';
 
 const TittleHeading = (props) => {
 
+    const displayHead = () => {
+        if (props.step != 'resume') {
+            return <h6>Selection de {props.step}</h6>;
+        } else {
+            return <h6>Résumé</h6>
+        }
+
+    }
 
     return(
         <div className="tittleHeading">
-            <h6>Selection de {props.step}</h6>
+        {displayHead()}
+            {/* <h6>Selection de {props.step}</h6> */}
         </div>
     )
 }
