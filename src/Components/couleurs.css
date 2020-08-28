@@ -4,6 +4,9 @@
 -o-transform: skew(-12deg, 0deg);
 -ms-transform: skew(-12deg, 0deg);
 transform: skew(-12deg, 0deg);
+
+
+
  
 }
 
@@ -11,8 +14,14 @@ transform: skew(-12deg, 0deg);
 .cardBody{
     border-left: #0843a6 1px solid;
     
+    
 } 
 
 .cardText{
     border-bottom: #0843a6 1px solid;
+}
+
+
+.selection {
+    border: 5px solid #0843a6;
 }

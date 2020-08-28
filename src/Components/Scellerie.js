@@ -34,13 +34,13 @@ const Scellerie = (props) => {
       <div
         key={props.data.id}
         className="CardScellerie"
-        style={{ width: "100% "}}
+        style={{ width: "100% ", border: "none" }}
         id={props.data.id}
       >
         <Col>
           <Card
-            className="Card lulu mt-5 "
-            style={{ width: "100% " }}
+            className="Card mt-5 "
+            style={{ width: "100% ", border: "none" }}
           >
             <Row className="shadow">
               <Col className="md-4 m-auto">
@@ -53,8 +53,8 @@ const Scellerie = (props) => {
               <Col clasName="col-md-8">
                 <Card.Body className="cardBody ">
                   <Card.Title>{props.data.option}</Card.Title>
-                  <Card.Text className="cardText border-bottom pb-3">{props.data.prix} €</Card.Text>
-                  <Button choice={props} category={'scellerie'}/>
+                  <Card.Text className="cardText  pb-3">{props.data.prix} €</Card.Text>
+                  <Button />
                 </Card.Body>
               </Col>
             </Row>

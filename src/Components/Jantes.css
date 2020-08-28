@@ -15,3 +15,7 @@
     .cardText{
         border-bottom: #0843a6 1px solid;
     }
+
+    .selection {
+        border: 5px solid #0843a6;
+    }
