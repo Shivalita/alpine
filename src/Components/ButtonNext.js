@@ -21,6 +21,9 @@ const ButtonNext = (props) => {
           
             case 'scellerie':
               return 'resume';
+
+            case 'resume':
+              return 'commande';
               
             default:
               return 'jantes';
@@ -29,6 +32,14 @@ const ButtonNext = (props) => {
 
     const nextStep = selectStep(props.currentStep);
 
+    const changeButtonName = (nextStep) => {
+      if (nextStep != 'commande') {
+        return 'Suivant';
+      } else {
+        return 'Commander'
+      }
+    }
+
     const changeStep = (nextStep) => {
         const dispatchStep = () => dispatch({type: "CHANGE_STEP", payload: nextStep});
         return dispatchStep();
@@ -36,7 +47,7 @@ const ButtonNext = (props) => {
 
     return(
         <div className="buttonNext ml-auto mt-5 mr-5 mb-3">
-            <Button onClick={() => changeStep(nextStep)}>suivant</Button>
+            <Button onClick={() => changeStep(nextStep)}>{changeButtonName(nextStep)}</Button>
         </div>
     )
 }

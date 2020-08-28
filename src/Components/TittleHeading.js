@@ -12,13 +12,11 @@ const TittleHeading = (props) => {
         } else {
             return <h6>Résumé</h6>
         }
-
     }
 
     return(
         <div className="tittleHeading">
-        {displayHead()}
-            {/* <h6>Selection de {props.step}</h6> */}
+            {displayHead()}
         </div>
     )
 }
