@@ -1,11 +1,27 @@
 import React, {useState, useEffect} from "react";
 import {useDispatch, useSelector} from 'react-redux';
-import CarouselUpdate from './CarouselUpdate.js';
+import "./Display.css";
+
 
 const Button = (props) => {
 
     const dispatch = useDispatch();
     const state = useSelector((state) => state);
+
+    const setSelection = () => {
+        const cards = document.querySelectorAll('.cardBody');
+        cards.forEach(card => {
+            if (card == event.target.parentElement.parentElement) {
+                card.classList.add('toto');
+            } else {
+                card.classList.remove('toto');
+                
+            }
+        });
+
+        // console.log(event.target.parentElement.parentElement)
+        // event.target.parentElement.parentElement.classList.add('toto');
+    }
 
     const storeChoice = (props) => {
         const chosen = {
@@ -15,19 +31,11 @@ const Button = (props) => {
             'prix' : props.choice.data.prix,
         }
 
+        setSelection();
+
         const chooseOption = () => dispatch({type: "CHOOSE_OPTION", payload: chosen});
         return chooseOption();
     }
-
-    const callCarouselUpdate = () => {
-        // console.log('TATA')
-        {console.log(state)}
-        return <CarouselUpdate />
-    }
-
-    useEffect(() => {    
-        callCarouselUpdate();
-    });
     
     return (
         <div>

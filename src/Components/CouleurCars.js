@@ -153,7 +153,6 @@ const CouleurCars = (props) => {
       const imagesArray = selectImages(); 
 
       return Object.keys(imagesArray).map((key) => {
-        console.log(imagesArray);
         return (
         <Carousel.Item key={imagesArray[key].id}>
           <img

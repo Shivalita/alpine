@@ -3,14 +3,12 @@ import Button from './Button.js';
 import {images} from './images.js';
 import {Container, Card, Col, Row} from 'react-bootstrap';
 
-
 const Résumé = (props) => {
 
-    
-  
     return (
      <section id="HomeRésumé">
         <div key={props.data.id} className="CardRésumé" style={{ width: "100% ", border: "none"}} id={props.data.id}>
+         {console.log(props)}
           <Col >
             <Card className="Card mt-5 " style={{ width: "100% ", border: "none"}}>
               <Row className="shadow">
@@ -19,8 +17,9 @@ const Résumé = (props) => {
                 </Col> */}
                 <Col clasName=" col-md-8">
                   <Card.Body className="carBody ">
-                    <Card.Title>{props.data.option}</Card.Title>
-                    <Card.Text className="cardText border-bottom pb-3">{props.data.prix} €</Card.Text>
+                    <Card.Title>{props.data.name}</Card.Title>
+                    <Card.Text>{props.data.option}</Card.Text>
+                    <Card.Text className="cardText border-bottom pb-3">{props.data.montant} €</Card.Text>
                     {/* <Button/> */}
                   </Card.Body>
                 </Col>

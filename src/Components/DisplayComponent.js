@@ -3,12 +3,20 @@ import Versions from "./Versions.js";
 import Couleurs from "./Couleurs.js";
 import Jantes from "./Jantes.js";
 import Scellerie from "./Scellerie.js";
+import Résumé from "./Résumé.js";
 import { catalogue } from "./catalogue.js";
-
+import { useSelector} from 'react-redux';
 
 const DisplayComponent = (props) => {
 
-  const version = props.version;
+  const state = useSelector((state) => state);
+
+  const options = {
+      version: {name: 'Version', option: state.personnalisation.version.option, montant: state.personnalisation.version.montant, id: 0},
+      couleur: {name: 'Couleur', option: state.personnalisation.couleur.option, montant: state.personnalisation.couleur.montant, id: 1},
+      jantes: {name: 'Jantes', option: state.personnalisation.jantes.option, montant: state.personnalisation.jantes.montant, id: 2},
+      scellerie: {name: 'Scellerie', option: state.personnalisation.scellerie.option, montant: state.personnalisation.scellerie.montant, id: 3},
+  }
 
     const displayVersions = () => {
         return Object.keys(catalogue.versions).map((key) => (
@@ -32,8 +40,7 @@ const DisplayComponent = (props) => {
         return Object.keys(catalogue.jantes).map((key) => (
           <Jantes 
             key={catalogue.jantes[key].id} 
-            data={catalogue.jantes[key]} 
-            version={version}
+            data={catalogue.jantes[key]}
           />
         ));
       };
@@ -43,6 +50,15 @@ const DisplayComponent = (props) => {
           <Scellerie
             key={catalogue.scellerie[key].id}
             data={catalogue.scellerie[key]}
+          />
+        ));
+      };
+
+      const displayResume = () => {
+        return Object.keys(options).map((key) => (
+          <Résumé
+            key={options[key].id}
+            data={options[key]}
           />
         ));
       };
@@ -60,6 +76,9 @@ const DisplayComponent = (props) => {
         
           case 'scellerie':
             return displayScellerie();
+
+          case 'resume':
+            return displayResume();
             
           default:
             return displayCouleurs();

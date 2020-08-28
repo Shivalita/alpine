@@ -20,7 +20,7 @@ const ButtonNext = (props) => {
               return 'scellerie';
           
             case 'scellerie':
-              return 'scellerie';
+              return 'resume';
               
             default:
               return 'jantes';
