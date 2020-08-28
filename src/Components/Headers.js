@@ -12,7 +12,7 @@ const Headers = () => {
     
     
         return(
-            <Navbar  className="HomeHeaders shadow-sm ">
+            <Navbar  className="HomeHeaders shadow-sm fixed-top ">
                 <Navbar.Brand ><img src={ Logo } className="Logo" /></Navbar.Brand>
                 <Nav >
                 <NavDropdown title="Menu" id="nav-dropdown" >

@@ -15,10 +15,6 @@
     border-bottom: #0843a6 1px solid;
 }
 
-.lulu :hover {
-    border: black 1px solid;
-}
-
-.lulu {
-    border: none;
+.selection {
+    border: 5px solid #0843a6;
 }
