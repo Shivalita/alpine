@@ -5,6 +5,8 @@ import {Container, Card, Col, Row} from 'react-bootstrap';
 
 const Jantes = (props) => {
 
+  const version = props.version;
+
     const DisplayImage = (option) => {
         if (option === 'Standard') {
           const src = images.configurateur.jantes.selection[0].src;
@@ -47,7 +49,7 @@ const Jantes = (props) => {
                   <Card.Body className="carBody border-left">
                     <Card.Title>{props.data.option}</Card.Title>
                     <Card.Text className="cardText border-bottom pb-3">{props.data.prix} €</Card.Text>
-                    <Button/>
+                    <Button choice={props} category={'jantes'}/>
                   </Card.Body>
                 </Col>
               </Row>

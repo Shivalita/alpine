@@ -9,7 +9,7 @@ const TittleHeading = (props) => {
 
     return(
         <div className="tittleHeading">
-            <h6>Selection de la couleur</h6>
+            <h6>Selection de {props.step}</h6>
         </div>
     )
 }

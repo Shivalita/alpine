@@ -11,7 +11,7 @@ const Prix = (props) => {
 
     return(
         <div className="prixCars mt-5 ml-3">
-            <h4>Modèle Configuré : 100 000 €</h4>
+            <h4>Modèle Configuré : {props.total} €</h4>
         </div>
     )
 }

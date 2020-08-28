@@ -19,80 +19,37 @@ import "./Display.css";
 const Display = () => {
 
   const state = useSelector((state) => state);
-  const step = state.stepState.step;
+  const step = state.stepState.currentStep.step;
+  const version = state.personnalisation.version.option;
   
-  // const displayVersions = () => {
-  //   return Object.keys(catalogue.versions).map((key) => (
-  //     <Versions
-  //       key={catalogue.versions[key].id}
-  //       data={catalogue.versions[key]}
-  //     />
-  //   ));
-  // };
-
-  // const displayCouleurs = () => {
-  //   return Object.keys(catalogue.couleurs).map((key) => (
-  //     <Couleurs
-  //       key={catalogue.couleurs[key].id}
-  //       data={catalogue.couleurs[key]}
-  //     />
-  //   ));
-  // };
-
-  // // const displayCouleurCars = () => {
-  // //   return Object.keys(images.configurateur.modele.selection).map(key => (
-  // //     <Couleurs key={images.configurateur.modele.selection[key].id} data={images.configurateur.modele.selection[key]}/>
-  // //   ));
-  // // }
-
-  // const displayJantes = () => {
-  //   return Object.keys(catalogue.jantes).map((key) => (
-  //     <Jantes 
-  //       key={catalogue.jantes[key].id} 
-  //       data={catalogue.jantes[key]} 
-  //     />
-  //   ));
-  // };
-
-  // const displayScellerie = () => {
-  //   return Object.keys(catalogue.scellerie).map((key) => (
-  //     <Scellerie
-  //       key={catalogue.scellerie[key].id}
-  //       data={catalogue.scellerie[key]}
-  //     />
-  //   ));
-  // };
-
-  // const displayEquipement = () => {
-  //   return Object.keys(catalogue.equipements.design).map((key) => (
-  //     <Equipement
-  //       key={catalogue.equipements.design[key].id}
-  //       data={catalogue.equipements.design[key]}
-  //     />
-  //   ));
-  // };
-
-  // const source = catalogue.versions[0].images.img2;  // AFFICHER UNE IMAGE
-  // const source = images.configurateur.couleur[0].src;
+  const displayVersions = () => {
+    return Object.keys(catalogue.versions).map((key) => (
+      <Versions
+        key={catalogue.versions[key].id}
+        data={catalogue.versions[key]}
+      />
+    ));
+  };
 
   return (
     <Container>
       <Row>
         <Col></Col>
-        {/* {displayVersions()} */}
+        {displayVersions()}
         <Col></Col>
       </Row>
 
       <Row className="shadow ">
-        <CouleurCars className="tittleSideBar " />
+        <CouleurCars className="tittleSideBar" />
         <Col className="sideBar p-5">
-          <TittleHeading />
-          <DisplayComponent step={step} />
-          {console.log(step)}
+          <TittleHeading step={state.stepState.currentStep.step}/>
+          <DisplayComponent step={step} version={version}/>
+          {/* {console.log('COUCOU')}
+          {console.log(step)} */}
           {/* {displayCouleurs()} */}
         </Col>
-        <Prix/>
-        <ButtonNext />
+        <Prix total={state.total.montant}/>
+        <ButtonNext currentStep={step}/>
       </Row>
       {/* {displayJantes()} */}
     </Container>

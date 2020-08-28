@@ -41,7 +41,9 @@ const initialState = {
       img4: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (4).jpg", id: 3 }
     },
 
-    stepState: { step: "version", id: 0 },
+    stepState: { 
+      currentStep: {step: "couleur", id: 0 }
+    },
 
     total: { montant: 0 }
 };
@@ -153,6 +155,29 @@ const initialState = {
       }
     }
   }
+
+
+    if (action.type === "CHANGE_STEP") {
+      const newStep = action.payload;
+      console.log(newStep)
+
+    //   return  {...state,
+    //     stepState : {...state.stepState,
+    //       step: { ...state.stepState.step = newStep }
+    //     }
+    //   }
+    // }
+
+
+      return  {...state,
+        stepState: {...state.stepState,
+          currentStep: {...state.stepState.currentStep,
+            step: state.stepState.currentStep.step = newStep
+          }
+        }
+      }
+
+    }
     
     return state;
   };

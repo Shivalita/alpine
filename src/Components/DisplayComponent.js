@@ -8,6 +8,8 @@ import { catalogue } from "./catalogue.js";
 
 const DisplayComponent = (props) => {
 
+  const version = props.version;
+
     const displayVersions = () => {
         return Object.keys(catalogue.versions).map((key) => (
           <Versions
@@ -26,17 +28,12 @@ const DisplayComponent = (props) => {
         ));
       };
     
-      // const displayCouleurCars = () => {
-      //   return Object.keys(images.configurateur.modele.selection).map(key => (
-      //     <Couleurs key={images.configurateur.modele.selection[key].id} data={images.configurateur.modele.selection[key]}/>
-      //   ));
-      // }
-    
       const displayJantes = () => {
         return Object.keys(catalogue.jantes).map((key) => (
           <Jantes 
             key={catalogue.jantes[key].id} 
             data={catalogue.jantes[key]} 
+            version={version}
           />
         ));
       };
@@ -65,13 +62,14 @@ const DisplayComponent = (props) => {
             return displayScellerie();
             
           default:
-            return displayVersions();
+            return displayCouleurs();
         }
     }
 
     return (
         <div>
             {displayStepComponent(props.step)}
+            {/* {console.log(props.step)} */}
         </div>
     )
 }
