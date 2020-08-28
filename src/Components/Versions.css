@@ -1,7 +1,16 @@
-.CardContainer :hover{
+#HomeVersion :hover{
+    transition: 3s;
     -moz-transform: scale(1.1);
 -webkit-transform: scale(1.1);
 -o-transform: scale(1.1);
 -ms-transform: scale(1.1);
 transform: scale(1.1);
+}
+
+.cardVersion{
+    border: #0843a6 2px solid;
+}
+
+.cardText{
+    border-bottom: #0843a6 2px solid ;
 }

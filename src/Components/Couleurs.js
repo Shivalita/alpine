@@ -3,6 +3,7 @@ import Button from './Button.js';
 import {Container, Card, Col, Row} from 'react-bootstrap';
 import {images} from './images.js';
 import './App.css';
+import './couleurs.css';
 
 
 const Couleurs = (props) => {
@@ -27,18 +28,13 @@ const Couleurs = (props) => {
           <Card className="Card mt-5 " style={{ width: "100% ", border: "none"}}>
             <Row className="shadow">
               <Col className="md-4 m-auto">
-                <Card.Img className="p-3" variant="top" src={DisplayImage(props.data.option)} />
+                <Card.Img className="CardImage p-3" variant="top" src={DisplayImage(props.data.option)} />
               </Col>
               <Col clasName=" col-md-8">
-                <Card.Body className="carBody border-left">
+                <Card.Body className="cardBody">
                   <Card.Title>{props.data.option}</Card.Title>
-<<<<<<< HEAD
-                  <Card.Text>{props.data.prix} €</Card.Text>
-                  <Button choice={props} category={'couleur'}/>
-=======
-                  <Card.Text className="cardText border-bottom pb-3">{props.data.prix} €</Card.Text>
+                  <Card.Text className="cardText pb-3">{props.data.prix} €</Card.Text>
                   <Button/>
->>>>>>> c246c84b0df096d668b6b032d13873a3e42414b3
                 </Card.Body>
               </Col>
             </Row>

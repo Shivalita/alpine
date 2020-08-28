@@ -20,12 +20,12 @@ const Versions = (props) => {
   return (
 
     <section id="HomeVersion">
-      <div key="props.data.id" className="CardContainer  " id={props.data.id}>
-        <Card className="card m-lg-5 d-inline-block shadow" style={{ width: "25rem", border: "none"}}>
+      <div key="props.data.id" className="CardContainer" id={props.data.id}>
+        <Card className="cardVersion m-lg-5 d-inline-block shadow" style={{ width: "25rem"}}>
           <Card.Img className="p-3" variant="top" src={DisplayImage(props.data.option)} />
           <Card.Body>
             <Card.Title>{props.data.option}</Card.Title>
-            <Card.Text  className="cardText border-bottom pb-3">à partir de {props.data.prix} €</Card.Text>
+            <Card.Text  className="cardText  pb-3">à partir de {props.data.prix} €</Card.Text>
             <Button  choice={props} category={'version'}/>
           </Card.Body>
         </Card>

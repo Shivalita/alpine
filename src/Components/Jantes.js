@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './Button.js';
 import {images} from './images.js';
 import {Container, Card, Col, Row} from 'react-bootstrap';
+import './Jantes.css';
 
 const Jantes = (props) => {
 
@@ -41,12 +42,12 @@ const Jantes = (props) => {
             <Card className="Card mt-5 " style={{ width: "100% ", border: "none"}}>
               <Row className="shadow">
                 <Col className="md-4 m-auto">
-                  <Card.Img className="p-3" variant="top" src={DisplayImage(props.data.option)} />
+                  <Card.Img className="CardImage p-3" variant="top" src={DisplayImage(props.data.option)} />
                 </Col>
                 <Col clasName="col-md-8">
-                  <Card.Body className="carBody border-left">
+                  <Card.Body className="cardBody ">
                     <Card.Title>{props.data.option}</Card.Title>
-                    <Card.Text className="cardText border-bottom pb-3">{props.data.prix} €</Card.Text>
+                    <Card.Text className="cardText  pb-3">{props.data.prix} €</Card.Text>
                     <Button/>
                   </Card.Body>
                 </Col>

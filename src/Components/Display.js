@@ -1,7 +1,7 @@
 import React from "react";
 import { catalogue } from "./catalogue.js";
 import { images } from "./images.js";
-import { Row } from "react-bootstrap";
+import { Row, ButtonGroup } from "react-bootstrap";
 import { Col, Container, Button } from "react-bootstrap";
 import Versions from "./Versions.js";
 import Couleurs from "./Couleurs.js";
@@ -13,6 +13,8 @@ import ButtonNext from "./ButtonNext";
 import TittleHeading from "./TittleHeading";
 import Equipement from "./Equipement.js";
 import "./Display.css";
+import ButtonOrder from "./ButtonOrder";
+import Résumé from "./Résumé.js";
 
 const Display = () => {
   
@@ -67,6 +69,15 @@ const Display = () => {
     ));
   };
 
+  const displayRésumé = () => {
+    return Object.keys(catalogue.jantes).map((key) => (
+      <Résumé 
+        key={catalogue.jantes[key].id} 
+        data={catalogue.jantes[key]} 
+      />
+    ));
+  }
+
   // const source = catalogue.versions[0].images.img2;  // AFFICHER UNE IMAGE
   // const source = images.configurateur.couleur[0].src;
 
@@ -81,28 +92,23 @@ const Display = () => {
         {/* <img src={source} alt="toto"></img> */}
       </Row>
 
-      <Row className="shadow ">
-<<<<<<< HEAD
-        <CouleurCars />
-        <Col>{displayCouleurs()}</Col>
-
-        {displayJantes()}
-
-=======
+      <Row className="cardComponants shadow">
         <CouleurCars className="tittleSideBar " />
         <Col className="sideBar p-5">
           <TittleHeading />
-          {displayCouleurs()}
-        </Col>
-        {/* {displayScellerie()} */}
+          {/* {displayCouleurs()} */}
         {/* {displayJantes()} */}
+        {displayScellerie()}
+          {/* {displayRésumé()} */}
+        </Col>
         {/* {displayEquipement()} */}
 
         <Prix/>
-        <ButtonNext />
->>>>>>> c246c84b0df096d668b6b032d13873a3e42414b3
+        {/* <ButtonNext /> */}
+        <ButtonOrder/>
+
       </Row>
-      {/* {displayJantes()} */}
+     
     </Container>
   );
 };

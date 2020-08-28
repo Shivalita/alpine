@@ -1,12 +1,16 @@
 .sideBar{
     
-    border-left: solid 1px black ;
-    border-bottom:solid 1px black ;
+    border-left: solid 1px #0843a6 ;
+    border-bottom:solid 1px #0843a6 ;
     
     
 }
 
 .tittleHeading{
-    border-bottom: 1px solid black;
+    border-bottom: 1px  solid #0843a6;
+}
+
+.cardComponants {
+    border: #0843a6 2px solid;
 }
 
