@@ -53,8 +53,8 @@ const Scellerie = (props) => {
               <Col clasName="col-md-8">
                 <Card.Body className="cardBody ">
                   <Card.Title>{props.data.option}</Card.Title>
-                  <Card.Text className="cardText  pb-3">{props.data.prix} €</Card.Text>
-                  <Button />
+                  <Card.Text className="cardText border-bottom pb-3">{props.data.prix} €</Card.Text>
+                  <Button choice={props} category={'scellerie'}/>
                 </Card.Body>
               </Col>
             </Row>

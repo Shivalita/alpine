@@ -34,11 +34,15 @@ const initialState = {
         }
       },
       
-    carousel : {
-        img1: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (1).jpg", id: 0 },
-        img2: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (2).jpg", id: 1 },
-        img3: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (3).jpg", id: 2 },
-        img4: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (4).jpg", id: 3 }
+    carousel: {
+      img1: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (1).jpg", id: 0 },
+      img2: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (2).jpg", id: 1 },
+      img3: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (3).jpg", id: 2 },
+      img4: { src: "../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_standard (4).jpg", id: 3 }
+    },
+
+    stepState: { 
+      currentStep: {step: "couleur", id: 0 }
     },
 
     total: { montant: 0 }
@@ -151,6 +155,29 @@ const initialState = {
       }
     }
   }
+
+
+    if (action.type === "CHANGE_STEP") {
+      const newStep = action.payload;
+      console.log(newStep)
+
+    //   return  {...state,
+    //     stepState : {...state.stepState,
+    //       step: { ...state.stepState.step = newStep }
+    //     }
+    //   }
+    // }
+
+
+      return  {...state,
+        stepState: {...state.stepState,
+          currentStep: {...state.stepState.currentStep,
+            step: state.stepState.currentStep.step = newStep
+          }
+        }
+      }
+
+    }
     
     return state;
   };

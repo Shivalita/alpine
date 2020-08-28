@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector} from 'react-redux';
 import { catalogue } from "./catalogue.js";
 import { images } from "./images.js";
 import { Row, ButtonGroup } from "react-bootstrap";
@@ -12,11 +13,16 @@ import Prix from "./Prix";
 import ButtonNext from "./ButtonNext";
 import TittleHeading from "./TittleHeading";
 import Equipement from "./Equipement.js";
+import DisplayComponent from "./DisplayComponent";
 import "./Display.css";
 import ButtonOrder from "./ButtonOrder";
 import Résumé from "./Résumé.js";
 
 const Display = () => {
+
+  const state = useSelector((state) => state);
+  const step = state.stepState.currentStep.step;
+  const version = state.personnalisation.version.option;
   
   const displayVersions = () => {
     return Object.keys(catalogue.versions).map((key) => (
@@ -27,86 +33,25 @@ const Display = () => {
     ));
   };
 
-  const displayCouleurs = () => {
-    return Object.keys(catalogue.couleurs).map((key) => (
-      <Couleurs
-        key={catalogue.couleurs[key].id}
-        data={catalogue.couleurs[key]}
-      />
-    ));
-  };
-
-  // const displayCouleurCars = () => {
-  //   return Object.keys(images.configurateur.modele.selection).map(key => (
-  //     <Couleurs key={images.configurateur.modele.selection[key].id} data={images.configurateur.modele.selection[key]}/>
-  //   ));
-  // }
-
-  const displayJantes = () => {
-    return Object.keys(catalogue.jantes).map((key) => (
-      <Jantes 
-        key={catalogue.jantes[key].id} 
-        data={catalogue.jantes[key]} 
-      />
-    ));
-  };
-
-  const displayScellerie = () => {
-    return Object.keys(catalogue.scellerie).map((key) => (
-      <Scellerie
-        key={catalogue.scellerie[key].id}
-        data={catalogue.scellerie[key]}
-      />
-    ));
-  };
-
-  const displayEquipement = () => {
-    return Object.keys(catalogue.equipements.design).map((key) => (
-      <Equipement
-        key={catalogue.equipements.design[key].id}
-        data={catalogue.equipements.design[key]}
-      />
-    ));
-  };
-
-  const displayRésumé = () => {
-    return Object.keys(catalogue.jantes).map((key) => (
-      <Résumé 
-        key={catalogue.jantes[key].id} 
-        data={catalogue.jantes[key]} 
-      />
-    ));
-  }
-
-  // const source = catalogue.versions[0].images.img2;  // AFFICHER UNE IMAGE
-  // const source = images.configurateur.couleur[0].src;
-
   return (
     <Container>
       <Row>
         <Col></Col>
         {displayVersions()}
         <Col></Col>
-        {/* {displayCouleurs()}
-            {displayJantes()} */}
-        {/* <img src={source} alt="toto"></img> */}
       </Row>
 
-      <Row className="cardComponants shadow">
-        <CouleurCars className="tittleSideBar " />
+      <Row className="shadow ">
+        <CouleurCars className="tittleSideBar" />
         <Col className="sideBar p-5">
-          <TittleHeading />
+          <TittleHeading step={state.stepState.currentStep.step}/>
+          <DisplayComponent step={step} version={version}/>
+          {/* {console.log('COUCOU')}
+          {console.log(step)} */}
           {/* {displayCouleurs()} */}
-        {/* {displayJantes()} */}
-        {displayScellerie()}
-          {/* {displayRésumé()} */}
         </Col>
-        {/* {displayEquipement()} */}
-
-        <Prix/>
-        {/* <ButtonNext /> */}
-        <ButtonOrder/>
-
+        <Prix total={state.total.montant}/>
+        <ButtonNext currentStep={step}/>
       </Row>
      
     </Container>

@@ -10,7 +10,7 @@ const CarouselUpdate = () => {
 
     const selectImages = (optionsState) => {
         console.log('TOTO')
-        console.log(optionsState)
+        // console.log(optionsState)
         if (
             (optionsState.version.option === 'Pure') && 
             (optionsState.couleur.option === 'Peinture opaque Blanc Glacier') &&
