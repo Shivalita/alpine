@@ -7,7 +7,7 @@ const Button = (props) => {
     const dispatch = useDispatch();
     const state = useSelector((state) => state);
 
-    const setSelection = () => {
+    const setSelection = (event) => {
         const cards = document.querySelectorAll('.cardBody');
         cards.forEach(card => {
             if (card == event.target.parentElement.parentElement) {
@@ -17,12 +17,9 @@ const Button = (props) => {
                 
             }
         });
-
-        // console.log(event.target.parentElement.parentElement)
-        // event.target.parentElement.parentElement.classList.add('toto');
     }
 
-    const storeChoice = (props) => {
+    const storeChoice = (props, event) => {
         const chosen = {
             'category' : props.category,
             'id' : props.choice.data.id,
@@ -30,7 +27,7 @@ const Button = (props) => {
             'prix' : props.choice.data.prix,
         }
 
-        setSelection();
+        setSelection(event);
 
         const chooseOption = () => dispatch({type: "CHOOSE_OPTION", payload: chosen});
         return chooseOption();
@@ -38,7 +35,7 @@ const Button = (props) => {
     
     return (
         <div>
-            <button type="button" onClick={() => storeChoice(props)} className="btn btn-primary ">
+            <button type="button" onClick={(event) => storeChoice(props, event)} className="btn btn-primary ">
                 Choisir cette version 
             </button>
         </div>
